@@ -1,6 +1,6 @@
 package com.github.brankale.common.data
 
-import com.github.brankale.gamememories.BuildConfig
+import com.github.brankale.common.BuildConfig
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.engine.cio.CIO

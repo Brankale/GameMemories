@@ -4,6 +4,7 @@ plugins {
     kotlin("plugin.serialization").version("2.0.0")
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.secrets)
 }
 
 android {
@@ -15,6 +16,10 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -22,6 +27,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
 }
 
 dependencies {
@@ -48,4 +54,8 @@ dependencies {
 
 
     implementation(kotlin("reflect"))
+}
+
+secrets {
+    propertiesFileName = "secrets.properties"
 }
