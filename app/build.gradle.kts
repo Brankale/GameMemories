@@ -82,6 +82,7 @@ dependencies {
 
     implementation(kotlin("reflect"))
 
+    implementation(project(":common"))
 }
 
 secrets {

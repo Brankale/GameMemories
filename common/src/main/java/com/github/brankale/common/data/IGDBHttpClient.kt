@@ -1,4 +1,4 @@
-package com.github.brankale.gamememories.network
+package com.github.brankale.common.data
 
 import com.github.brankale.gamememories.BuildConfig
 import io.ktor.client.HttpClient
@@ -9,7 +9,6 @@ import io.ktor.client.plugins.auth.Auth
 import io.ktor.client.plugins.auth.providers.BearerTokens
 import io.ktor.client.plugins.auth.providers.bearer
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
-import io.ktor.client.plugins.logging.Logging
 import io.ktor.client.request.header
 import io.ktor.client.request.post
 import io.ktor.http.URLProtocol

@@ -1,4 +1,4 @@
-package com.github.brankale.gamememories.model
+package com.github.brankale.common.data.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

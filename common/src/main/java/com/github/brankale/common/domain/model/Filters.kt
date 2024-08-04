@@ -1,9 +1,9 @@
-package com.github.brankale.gamememories.utils
+package com.github.brankale.common.domain.model
 
 class Filter {
 
     companion object {
-        val DEFAULT = Filter.Builder().build()
+        val DEFAULT = Builder().build()
     }
 
     private val field: List<String>

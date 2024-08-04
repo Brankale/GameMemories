@@ -1,4 +1,4 @@
-package com.github.brankale.gamememories.utils
+package com.github.brankale.common.data.utils
 
 import kotlinx.serialization.SerialName
 import kotlin.reflect.KProperty
