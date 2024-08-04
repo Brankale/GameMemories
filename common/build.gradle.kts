@@ -1,3 +1,5 @@
+import com.google.protobuf.gradle.id
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -5,6 +7,7 @@ plugins {
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
     alias(libs.plugins.secrets)
+    alias(libs.plugins.protobuf)
 }
 
 android {
@@ -52,10 +55,31 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
+    implementation(libs.androidx.datastore)
+    implementation(libs.google.protobuf.kotlin)
+    implementation(libs.google.protobuf.java)
 
     implementation(kotlin("reflect"))
 }
 
 secrets {
     propertiesFileName = "secrets.properties"
+}
+
+protobuf {
+    protoc {
+        artifact = libs.google.protobuf.compiler.get().toString()
+    }
+    generateProtoTasks {
+        all().forEach { task ->
+            task.builtins {
+                id("java") {
+                    option("lite")
+                }
+                id("kotlin") {
+                    option("lite")
+                }
+            }
+        }
+    }
 }
