@@ -83,6 +83,8 @@ dependencies {
     implementation(kotlin("reflect"))
 
     implementation(project(":common"))
+
+    implementation(libs.coil.compose)
 }
 
 secrets {
